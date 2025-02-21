@@ -1,0 +1,32 @@
+<div class="filters">
+  <button class="btn btn-info" (click)="showTudo()">Tudo</button>
+  <button class="btn btn-secondary" (click)="showDespesa()">Despesas</button>
+  <button class="btn btn-success" (click)="showReceita()">Receita</button>
+</div>
+<ul class="list-group">
+  <li
+    *ngFor="let transacao of transacoesFiltradas"
+    [ngClass]="
+      transacao.tipo == 'receita' ? 'item item--receita' : 'item item--despesa'
+    "
+    class="list-group-item"
+  >
+    <div class="item__info">
+      <h3>{{ transacao.tipo }}</h3>
+      <p>{{ transacao.descricao }}</p>
+      <h5 class="item__info__value">R$ {{ transacao.valor }}</h5>
+    </div>
+    <div class="item__acoes">
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="removerTransacao(transacao.id)"
+      >
+        Deletar
+      </button>
+      <button type="submit" class="btn btn-warning" disabled>
+        Editar (não funcional)
+      </button>
+    </div>
+  </li>
+</ul>

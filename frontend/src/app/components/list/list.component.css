@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(236, 236, 236);
+}
+
+.item {
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+  width: 80vw;
+  align-self: center;
+}
+
+.item--receita {
+  background-color: rgb(221, 255, 193);
+}
+
+.item--despesa {
+  background-color: rgb(216, 216, 216);
+}
+
+.item__acoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item__info__value {
+  padding: 3px;
+  border-radius: 5px;
+  background-color: white;
+  width: 100px;
+}
